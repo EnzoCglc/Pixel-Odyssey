@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dldljtpf3v1ax"]
+
+[ext_resource type="Script" path="res://Scene/Gui/Script/button_main_menu.gd" id="1_21paq"]
+[ext_resource type="FontFile" uid="uid://hqsyl7hoay46" path="res://font/THE BOLD FONT - FREE VERSION - 2023.otf" id="1_hb3fa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lb1p6"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21paq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lb1p6")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 232.0
+offset_right = 714.0
+offset_bottom = 313.0
+text = "Start"
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 343.0
+offset_right = 724.0
+offset_bottom = 415.0
+text = "Options"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 437.0
+offset_right = 723.0
+offset_bottom = 505.0
+text = "exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 44.0
+offset_right = 926.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("1_hb3fa")
+theme_override_font_sizes/font_size = 99
+text = "Pixel odyssey "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_button_3_pressed"]

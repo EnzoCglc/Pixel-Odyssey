@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=4 uid="uid://b47v42lm4dgdp"]
+
+[ext_resource type="PackedScene" uid="uid://bi43odvmo2vd0" path="res://Scene/Player/player.tscn" id="1_7ryus"]
+[ext_resource type="TileSet" uid="uid://783pp0ai0ok7" path="res://Scene/Monde/Monde 1/monde_1.tres" id="2_e2ly2"]
+[ext_resource type="PackedScene" uid="uid://dmy4a3p7e8me5" path="res://Scene/Piege/death_zone.tscn" id="3_8yymp"]
+[ext_resource type="PackedScene" uid="uid://dw2bn8khloqjd" path="res://Scene/Item/checkpoint/checkpoint.tscn" id="4_fqrqe"]
+
+[node name="Monde 1" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-160.0, -161.0, -160.0]
+metadata/_edit_vertical_guides_ = [-63.0, -64.0]
+
+[node name="PLayer" parent="." instance=ExtResource("1_7ryus")]
+position = Vector2(29, 35)
+scale = Vector2(0.5, 0.5)
+collision_mask = 6
+
+[node name="Camera2D" type="Camera2D" parent="PLayer"]
+position = Vector2(2, 0)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="Monde1_layer" type="Node2D" parent="."]
+
+[node name="Monde 1" type="TileMapLayer" parent="Monde1_layer"]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD+/wUAAgAHAAIAAAD//wUAAgAHAAIAAAAAAAUAAgAHAAIAAAABAAUAAgAHAAIAAAACAAUAAgAHAAIAAAADAAUAAgAHAAIAAAAEAAUAAgAHAAIAAAAFAAUAAgAHAAIAAAAGAAUAAgAHAAIAAAAHAAUAAgAHAAIAAAAIAAUAAgAIAAIAAAD9/wUAAgAGAAIAAAADAAMAAgAHAAAAAAAIAAQAAgAIAAEAAAAHAAQAAgAHAAEAAAAGAAQAAgAHAAEAAAAFAAQAAgAHAAEAAAAEAAQAAgAHAAEAAAADAAQAAgAHAAEAAAACAAQAAgAHAAEAAAABAAQAAgAHAAEAAAAAAAQAAgAHAAEAAAD//wQAAgAHAAEAAAD+/wQAAgAHAAEAAAD+/wMAAgAHAAAAAAD9/wMAAgAGAAAAAAD9/wQAAgAGAAEAAAD//wMAAgAHAAAAAAAAAAMAAgAHAAAAAAABAAMAAgAHAAAAAAACAAMAAgAHAAAAAAAIAAMAAgAIAAAAAAAHAAMAAgAHAAAAAAAGAAMAAgAHAAAAAAAFAAMAAgAHAAAAAAAEAAMAAgAHAAAAAAANAAMAAgAGAAAAAAAOAAMAAgAHAAAAAAAPAAMAAgAIAAAAAAANAAQAAgAGAAIAAAAOAAQAAgAHAAIAAAAPAAQAAgAIAAIAAAATAAIAAgAGAAAAAAATAAMAAgAGAAIAAAAUAAIAAgAHAAAAAAAUAAMAAgAHAAIAAAAVAAIAAgAIAAAAAAAVAAMAAgAIAAIAAAAZAAUAAgAGAAAAAAAZAAYAAgAGAAIAAAAaAAUAAgAHAAAAAAAaAAYAAgAHAAIAAAAbAAUAAgAIAAAAAAAbAAYAAgAIAAIAAAAfAAMAAgAGAAAAAAAfAAQAAgAGAAIAAAAgAAMAAgAHAAAAAAAgAAQAAgAHAAIAAAAhAAMAAgAIAAAAAAAhAAQAAgAIAAIAAAAlAAIAAgAMAAAAAAAmAAIAAgANAAAAAAAnAAIAAgAOAAAAAAArAAIAAgANAAEAAAArAAMAAgANAAIAAAAsAAIAAgAOAAEAAAAsAAMAAgAOAAIAAAAwAAQAAgANAAEAAAAwAAUAAgANAAIAAAAxAAQAAgAOAAEAAAAxAAUAAgAOAAIAAAA1AAEAAgANAAEAAAA1AAIAAgANAAIAAAA2AAEAAgAOAAEAAAA2AAIAAgAOAAIAAABAAAMAAgANAAEAAABAAAQAAgANAAIAAABBAAMAAgAOAAEAAABBAAQAAgAOAAIAAAA=")
+tile_set = ExtResource("2_e2ly2")
+
+[node name="Platforme" type="TileMapLayer" parent="Monde1_layer/Monde 1"]
+tile_map_data = PackedByteArray("AABHAAEAAgARAAEAAABIAAEAAgASAAEAAABJAAEAAgATAAEAAABOAP//AgARAAEAAABPAP//AgASAAEAAABQAP//AgATAAEAAABUAP3/AgARAAEAAABVAP3/AgASAAEAAABWAP3/AgATAAEAAABcAPv/AgARAAEAAABdAPv/AgASAAEAAABeAPv/AgATAAEAAABkAAMAAgARAAEAAABlAAMAAgASAAEAAABmAAMAAgATAAEAAAA=")
+tile_set = ExtResource("2_e2ly2")
+
+[node name="Zone de mort" type="Node2D" parent="."]
+position = Vector2(-18, 35)
+
+[node name="Area2D" parent="Zone de mort" instance=ExtResource("3_8yymp")]
+position = Vector2(142, 54)
+
+[node name="Checkpoint" parent="." instance=ExtResource("4_fqrqe")]
+position = Vector2(658, -23)
+Respawn_x = 29
+Respawn_y = 35
+
+[connection signal="Death" from="Zone de mort/Area2D" to="Checkpoint" method="_on_area_2d_death"]
