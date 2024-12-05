@@ -1,0 +1,157 @@
+[gd_scene load_steps=16 format=3 uid="uid://d0ydxa6413h6e"]
+
+[ext_resource type="Texture2D" uid="uid://8ri7lnd7dlgi" path="res://asset/Gui/Menu/Background image.png" id="1_jndve"]
+[ext_resource type="Script" path="res://Scene/Gui/Menu start/Script/button_menu.gd" id="1_li573"]
+[ext_resource type="FontFile" uid="uid://bqni1ymrlb3dt" path="res://font/GrapeSoda.ttf" id="2_fift1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ijgf"]
+texture = ExtResource("1_jndve")
+modulate_color = Color(0.581033, 0.581033, 0.581033, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ubmcf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kk8c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p2nq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rex62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kn4pk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8d6da"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kwspf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58cft"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ruync"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxlm8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b003"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_li573")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2ijgf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.167187
+anchor_bottom = 0.39537
+offset_right = 467.0
+offset_bottom = 654.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.791146
+anchor_top = -0.0407407
+anchor_right = 1.0151
+anchor_bottom = 0.0953704
+offset_left = -426.0
+offset_bottom = 286.0
+grow_horizontal = 0
+rotation = 0.261799
+theme_override_fonts/font = ExtResource("2_fift1")
+theme_override_font_sizes/font_size = 99
+text = "Pixel Odyssey"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="play" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.0140625
+anchor_top = 0.144444
+anchor_right = 0.164063
+anchor_bottom = 0.176852
+offset_left = 85.0
+offset_top = 99.0
+offset_right = 333.0
+offset_bottom = 217.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fift1")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ubmcf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0kk8c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p2nq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rex62")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kn4pk")
+text = "Start
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Option" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.00520833
+anchor_top = 0.202778
+anchor_right = 0.158333
+anchor_bottom = 0.232407
+offset_left = 102.0
+offset_top = 250.0
+offset_right = 344.0
+offset_bottom = 371.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fift1")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8d6da")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kwspf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p2nq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_58cft")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kn4pk")
+text = "Option"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.00989583
+anchor_top = 0.243519
+anchor_right = 0.00989583
+anchor_bottom = 0.243519
+offset_left = 93.0
+offset_top = 419.999
+offset_right = 629.0
+offset_bottom = 573.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fift1")
+theme_override_font_sizes/font_size = 85
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ruync")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yxlm8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p2nq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7b003")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kn4pk")
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
