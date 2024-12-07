@@ -103,19 +103,15 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Gems" parent="Gems zone" instance=ExtResource("7_pns8s")]
 position = Vector2(645, -165)
-scale = Vector2(1, 1)
 
 [node name="Gems2" parent="Gems zone" instance=ExtResource("7_pns8s")]
 position = Vector2(200, -169)
-scale = Vector2(1, 1)
 
 [node name="Gems3" parent="Gems zone" instance=ExtResource("7_pns8s")]
 position = Vector2(1073, -184)
-scale = Vector2(1, 1)
 
 [node name="Gems4" parent="Gems zone" instance=ExtResource("7_pns8s")]
 position = Vector2(1355, -186)
-scale = Vector2(1, 1)
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_uj7p1")]
 position = Vector2(904, -196)

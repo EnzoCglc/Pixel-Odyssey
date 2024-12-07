@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scene/Gui/Menu Option/Script/Input_settings.gd" id="1_ystuv"]
 [ext_resource type="Texture2D" uid="uid://8ri7lnd7dlgi" path="res://asset/Gui/Menu/Background image.png" id="2_8bvy2"]
-[ext_resource type="FontFile" uid="uid://7xlrqtujm6j0" path="res://asset/font/Kenney Future Narrow.ttf" id="3_ioo6c"]
+[ext_resource type="FontFile" uid="uid://7xlrqtujm6j0" path="res://font/Kenney Future Narrow.ttf" id="3_ioo6c"]
 [ext_resource type="PackedScene" uid="uid://bd8rctju5u3j0" path="res://Scene/Gui/Menu Option/input_button.tscn" id="5_14y1g"]
-[ext_resource type="FontFile" uid="uid://bqni1ymrlb3dt" path="res://asset/font/GrapeSoda.ttf" id="5_cj77s"]
+[ext_resource type="FontFile" uid="uid://bqni1ymrlb3dt" path="res://font/GrapeSoda.ttf" id="5_cj77s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2lwj"]
 texture = ExtResource("2_8bvy2")

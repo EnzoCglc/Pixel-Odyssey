@@ -13,7 +13,9 @@ var checkpoint = 0
 
 # Gestion stats player
 var speed: float = 200
-var jump_velocity = -550
+var jump_velocity = -450
+var jumps_count = 0
+var max_jump = 2
 
 # Gestion globale des gems
 var gems_collected: int = 0

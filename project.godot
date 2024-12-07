@@ -69,4 +69,4 @@ Back={
 
 [physics]
 
-2d/default_gravity=2500.0
+2d/default_gravity=1500.0
