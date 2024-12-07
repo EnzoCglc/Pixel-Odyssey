@@ -1,62 +1,96 @@
 extends CharacterBody2D
 
-# Constantes pour la vitesse et le saut
-#const SPEED = 200.0
-#const JUMP_VELOCITY = -550.0
-
-# Variables pour la gestion de la gravité et du saut
+# Utilise la gravité par défaut du projet
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var can_jump_duration = 0.2  # Durée pendant laquelle le personnage peut sauter
-var can_jump_timer = 0.0  # Timer pour le saut
 
+# Références aux nœuds
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D  # gerer la boite de collision 
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var jump_song: AudioStreamPlayer = $Jump_song
+@onready var particule: AnimatedSprite2D = $particule
 
+
+
+# Variables de contrôle
 var current_direction = 1  # 1 pour droite, -1 pour gauche
+var current_animation = ""  # Animation actuellement jouée
 
 func _ready():
-	# Initialisation du timer de saut
-	can_jump_timer = 0.0
-	add_to_group("Player")
-	
+	add_to_group("Player")  # Ajout à un groupe pour une gestion globale
 
 func _physics_process(delta):
-	# Mise à jour de la vélocité en Y
-	if not is_on_floor():
-		velocity.y += gravity * delta
-		can_jump_timer -= delta  # Décrémente le délai de saut
-	else:
-		velocity.y = 0
-		can_jump_timer = can_jump_duration  # Réinitialise le délai de saut
+	# Appels principaux
+	process_input()  # Gère les entrées utilisateur et les actions (saut, déplacements)
+	update_physics(delta)  # Mise à jour de la physique du personnage
+	update_animation()  # Mise à jour des animations en fonction de l'état
 
-	# Gère le saut
-	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or can_jump_timer > 0):
-		velocity.y = GameManager.jump_velocity
+# Variable pour suivre l'état du saut et particule
+var can_jump = true
 
-	# Mise à jour de la vélocité en X
-	var direction = Input.get_axis("move_left", "move_right")
+
+func process_input():
+	var direction = Input.get_axis("move_left", "move_right")  # Récupère l'axe de déplacement
 	if direction != 0:
 		velocity.x = direction * GameManager.speed
-		current_direction = direction  # Met à jour la direction actuelle
+		current_direction = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, GameManager.speed)
-	
-	if current_direction != -1:
-		collision_shape_2d.position = Vector2(0, 0)
-	elif current_direction != 1:
-		collision_shape_2d.position = Vector2(22, 0)
 
-	# Déplacement du personnage
+	# Gestion du saut
+	if Input.is_action_just_pressed("ui_accept"):
+		# Si le personnage touche le sol, réinitialise le compteur de sauts
+		if is_on_floor():
+			GameManager.jumps_count = 0
+			can_jump = true  # Autorise le saut à nouveau
+
+		# Si le joueur est autorisé à sauter et n'a pas atteint la limite
+		if GameManager.jumps_count < GameManager.max_jump:
+			velocity.y = GameManager.jump_velocity
+			GameManager.jumps_count += 1
+			#jump_song.play()
+			
+	
+# Mise à jour de la physique
+func update_physics(delta):
+	# Applique la gravité si le personnage n'est pas au sol
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	# Déplace le personnage avec détection de collisions
 	move_and_slide()
 
-	# Mise à jour de l'animation en fonction de la vélocité
-	var is_moving = velocity.length() > 0
-	if is_moving:
-		animated_sprite_2d.play("Run")  # Joue l'animation de course
-		animated_sprite_2d.flip_h = current_direction < 0  # Retourne le sprite selon la direction actuelle
-	else:
-		if is_on_floor():
-			animated_sprite_2d.play("Stand")  # Joue l'animation d'arrêt
+# Mise à jour des animations
+func update_animation():
+	animated_sprite_2d.flip_h = current_direction < 0
+	
+	# Si le personnage n'est pas au sol (en l'air)
+	if not is_on_floor():
+		if velocity.y < 0:
+			# En train de sauter
+			if GameManager.jumps_count == 2:
+				# Animation de double saut
+				animated_sprite_2d.play("Double_Jump")
+				particule.play("Jump_particules")
+				current_animation = "Double_Jump"
+			elif current_animation != "Jump":
+				# Animation de premier saut (simple)
+				animated_sprite_2d.play("Jump")
+				current_animation = "Jump"
 		else:
-			animated_sprite_2d.play("Jump")  # Joue l'animation de saut
-			animated_sprite_2d.flip_h = current_direction < 0  # Garder la direction en l'air
+			# En train de tomber
+			if current_animation != "Fall":
+				animated_sprite_2d.play("Fall")
+				current_animation = "Fall"
+	
+	# Si le personnage est au sol
+	elif velocity.x != 0:
+		# Animation de course    
+		if current_animation != "Run":
+			animated_sprite_2d.play("Run")
+			current_animation = "Run"
+	
+	# Si le personnage est immobile (arrêt)
+	else:
+		if current_animation != "Stand":
+			animated_sprite_2d.play("Stand")
+			current_animation = "Stand"
