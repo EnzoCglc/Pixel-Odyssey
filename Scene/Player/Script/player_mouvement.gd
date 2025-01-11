@@ -58,6 +58,7 @@ func update_physics(delta):
 
 	# Déplace le personnage avec détection de collisions
 	move_and_slide()
+	
 
 # Mise à jour des animations
 func update_animation():

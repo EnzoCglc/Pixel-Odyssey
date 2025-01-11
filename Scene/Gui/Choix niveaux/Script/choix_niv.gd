@@ -9,8 +9,9 @@ func _on_niv_2_pressed() -> void:
 	GameManager.gems_collected = 0
 
 func _on_niv_3_pressed() -> void:
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file("res://Scene/Niveaux/LVL 3/map_lvl_3.tscn")
+	GameManager.gems_collected = 0
 
 func _on_niv_4_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scene/Niveaux/LVL 4/map_lvl_4.tscn")
+	GameManager.gems_collected = 0

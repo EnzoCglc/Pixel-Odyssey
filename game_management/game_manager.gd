@@ -3,9 +3,9 @@ extends Node
 # Gestion du personnage
 @onready var p_layer: CharacterBody2D = $"../PLayer"
 
-# Gestion globale Portal
-@export var Pos_Portal_x = 0
-@export var Pos_Portal_y = 0
+# Gestion globale Checkpoint
+@export var Pos_Checkpoint_x = 0
+@export var Pos_Checkpoint_y = 0
 
 @export var Spawn_du_monde_x = 0
 @export var Spawn_du_monde_y = 0
@@ -50,6 +50,6 @@ func _on_spike_death() -> void:
 		
 func respawn():
 	if checkpoint >= 1:
-		p_layer.position = Vector2(Pos_Portal_x, Pos_Portal_y)
+		p_layer.position = Vector2(Pos_Checkpoint_x, Pos_Checkpoint_y)
 	else:
 		p_layer.position = Vector2(Spawn_du_monde_x, Spawn_du_monde_y)
