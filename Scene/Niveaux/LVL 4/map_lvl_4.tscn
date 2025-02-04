@@ -17,10 +17,10 @@ bg_color = Color(0.788235, 0.8, 0.631373, 1)
 [node name="MapLvl4" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -210.0
-offset_top = -51.0
-offset_right = 2694.0
-offset_bottom = 1009.0
+offset_left = -1054.0
+offset_top = -622.0
+offset_right = 2934.0
+offset_bottom = 1175.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2ncny")
 
 [node name="Game manager" parent="." instance=ExtResource("1_6v43n")]
@@ -42,10 +42,18 @@ scale = Vector2(0.5, 0.5)
 zoom = Vector2(3, 3)
 
 [node name="Slime" parent="." instance=ExtResource("6_l2cxt")]
-position = Vector2(1061, 490)
-scale = Vector2(0.2, 0.2)
+position = Vector2(1115, 487)
 collision_mask = 29
 platform_floor_layers = 4294901760
+left_limit = 1000.0
+right_limit = 1144.0
+
+[node name="Slime2" parent="." instance=ExtResource("6_l2cxt")]
+position = Vector2(1349, 487)
+collision_mask = 29
+platform_floor_layers = 4294901760
+left_limit = 1213.0
+right_limit = 1385.0
 
 [node name="Spike_zone" type="Node2D" parent="."]
 

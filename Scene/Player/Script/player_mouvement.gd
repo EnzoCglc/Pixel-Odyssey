@@ -38,16 +38,11 @@ func process_input():
 
 	# Gestion du saut
 	if Input.is_action_just_pressed("ui_accept"):
-		# Si le personnage touche le sol, réinitialise le compteur de sauts
 		if is_on_floor():
 			GameManager.jumps_count = 0
-			can_jump = true  # Autorise le saut à nouveau
-
-		# Si le joueur est autorisé à sauter et n'a pas atteint la limite
 		if GameManager.jumps_count < GameManager.max_jump:
 			velocity.y = GameManager.jump_velocity
 			GameManager.jumps_count += 1
-			#jump_song.play()
 			
 	
 # Mise à jour de la physique

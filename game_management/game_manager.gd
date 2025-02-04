@@ -39,6 +39,11 @@ func check_threshold():
 		# Éventuellement émettre un autre signal pour indiquer que le portail est ouvert
 
 # Méthode pour gérer la mort
+func respawn():
+	if checkpoint >= 1:
+		p_layer.position = Vector2(Pos_Checkpoint_x, Pos_Checkpoint_y)
+	else:
+		p_layer.position = Vector2(Spawn_du_monde_x, Spawn_du_monde_y)
 
 func _on_checkpoint_checkpoint_actif() -> void:
 	checkpoint += 1
@@ -47,9 +52,9 @@ func _on_deathzone_death() -> void:
 	respawn()
 func _on_spike_death() -> void:
 	respawn()
-		
-func respawn():
-	if checkpoint >= 1:
-		p_layer.position = Vector2(Pos_Checkpoint_x, Pos_Checkpoint_y)
-	else:
-		p_layer.position = Vector2(Spawn_du_monde_x, Spawn_du_monde_y)
+func _on_slime_death() -> void:
+	respawn()
+
+
+func _on_slime_2_death() -> void:
+	pass # Replace with function body.

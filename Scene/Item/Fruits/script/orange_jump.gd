@@ -8,7 +8,7 @@ extends Node2D
 @export var Jump = -500 #Valeur de base
 @export var timer = 1
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	anim_player.play("Collect")
 	despawn.play("default")
 	GameManager.jump_velocity = Jump
