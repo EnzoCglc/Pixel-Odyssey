@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://4h3pnk0c0cue"]
+
+[ext_resource type="Script" path="res://Scene/Gui/Menu Option/Script/Input_settings.gd" id="1_ystuv"]
+[ext_resource type="Texture2D" uid="uid://poe54abm54ve" path="res://asset/Gui/Menu/image fond.png" id="2_e72p3"]
+[ext_resource type="FontFile" uid="uid://7xlrqtujm6j0" path="res://font/Kenney Future Narrow.ttf" id="3_ioo6c"]
+[ext_resource type="PackedScene" uid="uid://bd8rctju5u3j0" path="res://Scene/Gui/Menu Option/input_button.tscn" id="5_14y1g"]
+[ext_resource type="FontFile" uid="uid://bqni1ymrlb3dt" path="res://font/GrapeSoda.ttf" id="5_cj77s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2lwj"]
+texture = ExtResource("2_e72p3")
+modulate_color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="Options_menu_touche" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ystuv")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q2lwj")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.0
+offset_top = -223.0
+offset_right = 355.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Action list" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Action list" instance=ExtResource("5_14y1g")]
+layout_mode = 2
+
+[node name="InputButton2" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Action list" instance=ExtResource("5_14y1g")]
+layout_mode = 2
+
+[node name="InputButton3" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Action list" instance=ExtResource("5_14y1g")]
+layout_mode = 2
+
+[node name="InputButton4" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Action list" instance=ExtResource("5_14y1g")]
+layout_mode = 2
+
+[node name="InputButton5" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/Action list" instance=ExtResource("5_14y1g")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+theme_override_fonts/font = ExtResource("3_ioo6c")
+theme_override_font_sizes/font_size = 20
+text = "réinitialiser les touches"
+
+[node name="Retour" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -316.5
+offset_top = -52.0
+offset_right = 316.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("5_cj77s")
+theme_override_font_sizes/normal_font_size = 35
+text = "Press Echap pour aller au menu principal "
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
