@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=4 uid="uid://ysk7h0gvnh2b"]
+
+[ext_resource type="PackedScene" uid="uid://dm5plu435p3k7" path="res://src/scenes/game_manager.tscn" id="1_tikcy"]
+[ext_resource type="PackedScene" uid="uid://dhnboxigit81w" path="res://src/scenes/ui/ui.tscn" id="2_3go6s"]
+[ext_resource type="TileSet" uid="uid://c53lt3a8o5a86" path="res://src/scenes/levels/level_1/monde_1.tres" id="3_fl0h7"]
+[ext_resource type="PackedScene" uid="uid://bi43odvmo2vd0" path="res://src/scenes/player/player.tscn" id="3_u7dfc"]
+[ext_resource type="PackedScene" uid="uid://dmy4a3p7e8me5" path="res://src/scenes/traps/death_zone.tscn" id="6_54rse"]
+[ext_resource type="PackedScene" uid="uid://dc6hfe37rerer" path="res://src/scenes/traps/Spike.tscn" id="7_eew2i"]
+[ext_resource type="PackedScene" uid="uid://dw2bn8khloqjd" path="res://src/scenes/items/checkpoints/checkpoint.tscn" id="8_2vidd"]
+[ext_resource type="PackedScene" uid="uid://bqie1ajgqv3v2" path="res://src/scenes/items/gems/Gems_AZU.tscn" id="9_dllr7"]
+[ext_resource type="PackedScene" uid="uid://dgkes1nysdvrv" path="res://src/scenes/enemies/slime.tscn" id="10_fgv6d"]
+[ext_resource type="PackedScene" uid="uid://dj8rsaokrv03e" path="res://src/scenes/items/portals/Portal.tscn" id="10_wexlt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2t25"]
+bg_color = Color(0.788235, 0.8, 0.631373, 1)
+
+[node name="Map_lvl_3" type="Node2D"]
+position = Vector2(-4, -7)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -538.0
+offset_top = -388.0
+offset_right = 2847.0
+offset_bottom = 1300.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a2t25")
+
+[node name="Game manager" parent="." instance=ExtResource("1_tikcy")]
+pos_checkpoint_x = 954
+pos_checkpoint_y = 563
+spawn_du_monde_x = 65
+spawn_du_monde_y = 168
+player_node_path = NodePath("../PLayer")
+alert_label_path = NodePath("../UI/AlertLabel")
+
+[node name="UI" parent="." instance=ExtResource("2_3go6s")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
+rotation = 0.000231038
+tile_map_data = PackedByteArray("AAACABAAAQAPAAUAAAACABEAAQAPAAUAAAACABIAAQAPAAUAAAACABMAAQAPAAUAAAACABQAAQAPAAUAAAACABUAAQAPAAUAAAACABYAAQAPAAUAAAAFABEAAQAPAAUAAAAFABIAAQAPAAUAAAAFABMAAQAPAAUAAAAFABQAAQAPAAUAAAAFABUAAQAPAAUAAAAFABYAAQAPAAUAAAAFABAAAQAPAAUAAAAFABcAAQAPAAUAAAACABcAAQAPAAUAAAACABgAAQAPAAUAAAACABkAAQAPAAUAAAACABoAAQAPAAUAAAACABsAAQAPAAUAAAACABwAAQAPAAYAAAADABwAAQAMAAUAAAAEABwAAQAMAAUAAAAFABwAAQAMAAUAAAAGABwAAQAMAAUAAAAHABwAAQAMAAUAAAAIABwAAQAMAAUAAAAJABwAAQAMAAUAAAAKABwAAQAMAAUAAAAHABgAAQAMAAUAAAAGABgAAQAMAAUAAAAIABgAAQAMAAUAAAAJABgAAQAMAAUAAAAKABgAAQAMAAUAAAAFABgAAQAPAAYAAAACAA8AAQAPAAUAAAAFAA8AAQAPAAUAAAAFAA4AAQAPAAUAAAACAA4AAQAPAAUAAAACAA0AAQAPAAUAAAAFAA0AAQAPAAUAAAACAAwAAQAPAAUAAAAFAAwAAQAPAAUAAAAFAAsAAQAPAAUAAAACAAsAAQAPAAUAAAAFAAoAAQAPAAUAAAAFAAkAAQAPAAUAAAAFAAgAAQAPAAUAAAAFAAcAAQAPAAUAAAACAAoAAQAPAAUAAAACAAkAAQAPAAUAAAACAAgAAQAPAAUAAAACAAcAAQAPAAUAAAACAAYAAQAPAAUAAAAFAAYAAQAPAAUAAAAFAAUAAQAPAAUAAAAFAAQAAQAPAAUAAAAFAAMAAQAPAAUAAAAFAAIAAQAPAAUAAAACAAUAAQAPAAUAAAACAAQAAQAPAAUAAAACAAMAAQAPAAUAAAACAAIAAQAPAAUAAAACAAEAAQAPAAUAAAACAAAAAQAPAAUAAAAFAAEAAQAPAAUAAAAFAAAAAQAPAAUAAAATAB0AAQARAAIAAAAUAB0AAQARAAIAAAAVAB0AAQARAAIAAAAdAB4AAQARAAIAAAAeAB4AAQASAAIAAAAfAB4AAQATAAIAAAAnAB4AAQARAAIAAAAxAB4AAQARAAIAAABLACYAAQAMAAQAAABMACYAAQANAAQAAAA+ACIAAQARAAIAAAA/ACIAAQASAAIAAABNACYAAQANAAQAAABOACYAAQANAAQAAABPACYAAQANAAQAAABRACYAAQANAAQAAABQACYAAQANAAQAAABSACYAAQANAAQAAAAyAB4AAQATAAIAAAAoAB4AAQATAAIAAABAACIAAQATAAIAAAA6ACQAAQANAAQAAAA7ACQAAQANAAQAAAA8ACQAAQAOAAQAAAA5ACQAAQAMAAQAAABTACYAAQANAAQAAABUACYAAQANAAQAAABVACYAAQANAAQAAABYACYAAQANAAQAAABWACYAAQANAAQAAABXACYAAQANAAQAAABaACYAAQANAAQAAABZACYAAQANAAQAAABbACYAAQANAAQAAABcACYAAQANAAQAAABdACYAAQANAAQAAABfACcAAQAMAAQAAABhACgAAQAMAAQAAABjACkAAQAMAAQAAABkACkAAQANAAQAAABoADEAAQAMAAQAAABpADEAAQANAAQAAABqADEAAQANAAQAAABrADEAAQANAAQAAABsADEAAQANAAQAAABtADEAAQANAAQAAABuADEAAQANAAQAAABvADEAAQANAAQAAABwADEAAQAOAAQAAABKACUAAQAOAAQAAABiACgAAQAOAAQAAABgACcAAQAOAAQAAABeACYAAQAOAAQAAABlACkAAQANAAQAAABmACkAAQAOAAQAAAACAP//AQAPAAUAAAACAP7/AQAPAAUAAAACAP3/AQAPAAUAAAACAPz/AQAPAAUAAAACAPv/AQAPAAUAAAACAPr/AQAPAAUAAAACAPn/AQAPAAUAAAACAPj/AQAPAAUAAAACAPf/AQAPAAUAAAAFAP//AQAPAAUAAAAFAP7/AQAPAAUAAAAFAP3/AQAPAAUAAAAFAPz/AQAPAAUAAAAFAPv/AQAPAAUAAAAFAPr/AQAPAAUAAAAFAPn/AQAPAAUAAAAFAPj/AQAPAAUAAAAFAPf/AQAPAAUAAAAFAPb/AQAPAAUAAAACAPb/AQAPAAUAAABJACUAAQAMAAQAAABWABsAAQAPAAUAAABWABwAAQAPAAUAAABWAB0AAQAPAAUAAABWAB4AAQAPAAUAAABWAB8AAQAPAAUAAABWACAAAQAPAAUAAABWACEAAQAPAAYAAABWABYAAQAPAAQAAABWABcAAQAPAAUAAABWABgAAQAPAAUAAABWABkAAQAPAAUAAABWABoAAQAPAAUAAABVACEAAQAOAAQAAABUACEAAQANAAQAAABTACEAAQANAAQAAABSACEAAQANAAQAAABRACEAAQANAAQAAABQACEAAQAMAAQAAAA=")
+tile_set = ExtResource("3_fl0h7")
+
+[node name="PLayer" parent="." instance=ExtResource("3_u7dfc")]
+position = Vector2(65, 168)
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="PLayer"]
+position = Vector2(2, -2)
+zoom = Vector2(3, 3)
+
+[node name="spike zone" type="Node2D" parent="."]
+
+[node name="Spike" parent="spike zone" instance=ExtResource("7_eew2i")]
+position = Vector2(1240, 600)
+
+[node name="Spike3" parent="spike zone" instance=ExtResource("7_eew2i")]
+position = Vector2(1345, 601)
+
+[node name="Spike2" parent="spike zone" instance=ExtResource("7_eew2i")]
+position = Vector2(1294, 601)
+
+[node name="Spike4" parent="spike zone" instance=ExtResource("7_eew2i")]
+position = Vector2(1000, 536)
+
+[node name="deathzone" type="Node2D" parent="."]
+
+[node name="Deathzone" parent="deathzone" instance=ExtResource("6_54rse")]
+position = Vector2(9, 729)
+scale = Vector2(4, 4)
+
+[node name="Deathzone2" parent="deathzone" instance=ExtResource("6_54rse")]
+position = Vector2(621, 788)
+rotation = -0.00932262
+scale = Vector2(4, 4)
+
+[node name="Deathzone3" parent="deathzone" instance=ExtResource("6_54rse")]
+position = Vector2(1278, 931)
+rotation = -0.00932262
+scale = Vector2(4, 4)
+
+[node name="Deathzone4" parent="deathzone" instance=ExtResource("6_54rse")]
+position = Vector2(1906, 925)
+rotation = -0.00932262
+scale = Vector2(4, 4)
+
+[node name="Checkpoint" parent="." instance=ExtResource("8_2vidd")]
+position = Vector2(954, 563)
+scale = Vector2(0.5, 0.5)
+
+[node name="gems" type="Node2D" parent="."]
+
+[node name="Gems2" parent="gems" instance=ExtResource("9_dllr7")]
+position = Vector2(1030, 537)
+
+[node name="Gems4" parent="gems" instance=ExtResource("9_dllr7")]
+position = Vector2(1319, 520)
+
+[node name="Gems" parent="gems" instance=ExtResource("9_dllr7")]
+position = Vector2(801, 469)
+
+[node name="Gems3" parent="gems" instance=ExtResource("9_dllr7")]
+position = Vector2(1716, 776)
+
+[node name="Portal" parent="." instance=ExtResource("10_wexlt")]
+position = Vector2(1828, 750)
+scale = Vector2(0.25, 0.25)
+
+[node name="Slime" parent="." instance=ExtResource("10_fgv6d")]
+position = Vector2(1456, 600)
+left_limit = 1417.0
+right_limit = 1505.0
+
+[connection signal="Death" from="spike zone/Spike" to="Game manager" method="_on_spike_death"]
+[connection signal="Death" from="spike zone/Spike3" to="Game manager" method="_on_spike_death"]
+[connection signal="Death" from="spike zone/Spike2" to="Game manager" method="_on_spike_death"]
+[connection signal="Death" from="spike zone/Spike4" to="Game manager" method="_on_spike_death"]
+[connection signal="Death" from="deathzone/Deathzone" to="Game manager" method="_on_deathzone_death"]
+[connection signal="Death" from="deathzone/Deathzone2" to="Game manager" method="_on_deathzone_death"]
+[connection signal="Death" from="deathzone/Deathzone3" to="Game manager" method="_on_deathzone_death"]
+[connection signal="Death" from="deathzone/Deathzone4" to="Game manager" method="_on_deathzone_death"]
+[connection signal="checkpoint_actif" from="Checkpoint" to="Game manager" method="_on_checkpoint_checkpoint_actif"]
+[connection signal="Death" from="Slime" to="Game manager" method="_on_slime_death"]

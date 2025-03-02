@@ -1,0 +1,27 @@
+res://Scene/Gui/Menu Option/input_button.tscn::c9a86b1555067cf55d649f34c95a1f5f::1733390609::res://.godot/exported/133200997/export-df5121072815a82ed83349f8c52e2f20-input_button.scn
+res://Scene/Gui/Menu Option/Options_menu.tscn::b773157dfca9444560c30541465ae297::1733591810::res://.godot/exported/133200997/export-72469981c1b89bf49aca277f26ddff12-Options_menu.scn
+res://Scene/Gui/Menu start/start.tscn::136d8dcde47127c7d9f08f97926e0b98::1738658122::res://.godot/exported/133200997/export-ed967114bede67baec2705e41d6d747d-start.scn
+res://Scene/Gui/UI/ui.tscn::1e6d50c7f00979f76383df7c0f107175::1733390609::res://.godot/exported/133200997/export-5713a6ef5542ae4cd96eaa2671446a47-ui.scn
+res://Scene/Item/checkpoint/checkpoint.tscn::ebe757e4d96d5029f001e595ab235741::1733390609::res://.godot/exported/133200997/export-8c6df34080ee77d7e42ecd95986c0931-checkpoint.scn
+res://Scene/Item/GEMS_AZU/Gems_AZU.tscn::4fb0884ae4d37bb6fe02d2dc262420db::1733589510::res://.godot/exported/133200997/export-43468f8da7ee7b98eab1b3b4df168403-Gems_AZU.scn
+res://Scene/Niveaux/LVL 1/map_lvl_1.tscn::9122bf78b098510c506fec0761d9e4a3::1738658122::res://.godot/exported/133200997/export-2899722fe037b295a3cd762e16412c71-map_lvl_1.scn
+res://Scene/Niveaux/LVL 3/map_lvl_3.tscn::7de77b3b42df383f5dac359f8991669d::1738658122::res://.godot/exported/133200997/export-3e4de579dfc34f57f2dbc95f53fb74fd-map_lvl_3.scn
+res://Scene/Player/player.tscn::6be0bb8093f32848f24e932859388f51::1738658122::res://.godot/exported/133200997/export-5f826d71465265917e2f99f1e4a39d68-player.scn
+res://default_bus_layout.tres::61cb5e8762caedce6e2b7067a1dea34b::1733390609::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://game_management/game_manager.tscn::448813543e732f69e9dd810615d5db2f::1738658122::res://.godot/exported/133200997/export-1cacaa69f63c36c70e6cc32cae1e5dcd-game_manager.scn
+res://Scene/Enemies/slime/slime.tscn::7dc89d353092f230586b19c33f4920cb::1738658123::res://.godot/exported/133200997/export-c3d4c2fbd76097ee52efb7a6e3727b52-slime.scn
+res://Scene/Gui/Choix niveaux/Choix niv.tscn::bde62c3bd84fb9102d368b28ab82f6ee::1738658255::res://.godot/exported/133200997/export-0660618b872bea640e9c567ba2640eb0-Choix niv.scn
+res://Scene/Gui/main_menu.tscn::2e7be99ec44e5c04b45d94743568b311::1733390609::res://.godot/exported/133200997/export-73a7dfb4ba63eb63ffa68edea4161f80-main_menu.scn
+res://Scene/Item/Plateforme/plateforme.tscn::7fb11d9b96a9bf213af6b2be9533af82::1733390609::res://.godot/exported/133200997/export-58de62263f16a5b4290f70cad61aad1c-plateforme.scn
+res://Scene/Item/Portal/Portal.tscn::c31e06a6afa550b708fbfc35d7c49c9e::1738655754::res://.godot/exported/133200997/export-9f7d43744bc6923fd2ae69b1962859ab-Portal.scn
+res://Scene/Niveaux/LVL 1/monde_1.tres::c65038349711603fbfff6c06bca8a60b::1738656262::res://.godot/exported/133200997/export-238a1fbd8c8fa71cf7a58de4cdcbc114-monde_1.res
+res://Scene/Niveaux/LVL 2/map_lvl_2.tscn::08cc109cbe12cfc260ff6a76260a2f84::1738658122::res://.godot/exported/133200997/export-b2fb2957db7e496802f990a9e48a2efd-map_lvl_2.scn
+res://Scene/Trap/death_zone.tscn::8d427fba0d053816d3781f5b29130365::1738658123::res://.godot/exported/133200997/export-a44d7793aae8f7ceca3e25157c4b3495-death_zone.scn
+res://Scene/Item/Fruits/banane_speed.tscn::673d15755f6d07d834dcc28e43096391::1733390609::res://.godot/exported/133200997/export-951d830870a2c7363c3d737f8f13bd60-banane_speed.scn
+res://Scene/Item/Fruits/Orange_Jump.tscn::02677d3adf1d4788358afe2e1ec46c1f::1733589510::res://.godot/exported/133200997/export-90a3ddfec9fcf976090001b04c3ca53b-Orange_Jump.scn
+res://Scene/Niveaux/LVL 4/map_lvl_4.tscn::6527e313857b634860c57155a9afa099::1738658163::res://.godot/exported/133200997/export-73b6b60bd5c2c1b1744324f1e90385ec-map_lvl_4.scn
+res://Scene/Niveaux/monde_1.tres::8f038d800b35eb644ccbb5fd5b4d4257::1733592066::res://.godot/exported/133200997/export-4832a448e856bffc74ae23a9c2d6203c-monde_1.res
+res://Scene/Player/Choix perso.tscn::de07f1230b56c16542a31af5bb751db7::1736236751::res://.godot/exported/133200997/export-8576a3ae655b2f5729d27be8ca59cbf2-Choix perso.scn
+res://Scene/Trap/script/Spike.tscn::41bdb90e38c14a1eb30780621e3a4985::1738655754::res://.godot/exported/133200997/export-b37a8958465d1ed4ee107b0d7469fbbc-Spike.scn
+res://Scene/Niveaux/LVL 5/map_lvl_5.tscn::15a6c8c5836700958fe4b053ca2664d8::1738658123::res://.godot/exported/133200997/export-c2edaf45a8dd4ec2aba430911af73756-map_lvl_5.scn
+res://Scene/Trap/Spike.tscn::8875fa8a6d73431aacb3f52e47226d9f::1736239458::res://.godot/exported/133200997/export-3c8fe6b753d8b36b0cca866d0230cf2b-Spike.scn

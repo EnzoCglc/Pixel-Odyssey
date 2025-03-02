@@ -1,0 +1,403 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcrsyidydfa5"]
+
+[ext_resource type="FontFile" uid="uid://hqsyl7hoay46" path="res://assets/fonts/THE BOLD FONT - FREE VERSION - 2023.otf" id="1_c8cok"]
+[ext_resource type="Script" path="res://src/scripts/ui/level_select/choix_niv.gd" id="1_ikdf2"]
+[ext_resource type="Texture2D" uid="uid://poe54abm54ve" path="res://assets/textures/ui/Menu/image fond.png" id="2_i8301"]
+[ext_resource type="FontFile" uid="uid://don4g1rqub3y3" path="res://assets/fonts/Play Leaves.otf" id="3_2y0hs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onyyt"]
+texture = ExtResource("2_i8301")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ikdf2")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_onyyt")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.218
+anchor_right = 0.506
+anchor_bottom = 0.218
+offset_left = -390.912
+offset_top = -63.264
+offset_right = 416.088
+offset_bottom = 45.736
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.420549, 0.0915947, 0.0922522, 1)
+theme_override_fonts/font = ExtResource("3_2y0hs")
+theme_override_font_sizes/font_size = 99
+text = "Selectionne le niv"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="niv1" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.199
+anchor_top = 0.47
+anchor_right = 0.199
+anchor_bottom = 0.47
+offset_left = -0.248047
+offset_top = -84.5601
+offset_right = 59.752
+offset_bottom = -24.5601
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.524
+anchor_right = 0.476
+anchor_bottom = 0.524
+offset_left = -26.7922
+offset_top = 1.4405
+offset_right = 13.2078
+offset_bottom = 47.4405
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv2" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.273
+anchor_top = 0.605
+anchor_right = 0.273
+anchor_bottom = 0.605
+offset_left = 0.503998
+offset_top = -85.04
+offset_right = 60.504
+offset_bottom = -25.04
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5251
+offset_top = 0.052
+offset_right = 12.4749
+offset_bottom = 46.052
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv3" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.348
+anchor_top = 0.47
+anchor_right = 0.348
+anchor_bottom = 0.47
+offset_left = 0.103973
+offset_top = -84.56
+offset_right = 60.104
+offset_bottom = -24.56
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.488
+anchor_right = 0.512
+anchor_bottom = 0.488
+offset_left = -27.8916
+offset_top = 0.418497
+offset_right = 12.1084
+offset_bottom = 46.4185
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv4" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.423
+anchor_top = 0.603
+anchor_right = 0.423
+anchor_bottom = 0.603
+offset_left = -0.296051
+offset_top = -84.744
+offset_right = 59.704
+offset_bottom = -24.744
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.1214
+offset_top = 1.81979
+offset_right = 7.87863
+offset_bottom = 47.8198
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv5" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498351
+anchor_top = 0.47
+anchor_right = 0.498351
+anchor_bottom = 0.47
+offset_left = -0.248047
+offset_top = -84.5601
+offset_right = 59.752
+offset_bottom = -24.5601
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.524
+anchor_right = 0.476
+anchor_bottom = 0.524
+offset_left = -26.7922
+offset_top = 1.4405
+offset_right = 13.2078
+offset_bottom = 47.4405
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv6" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.572351
+anchor_top = 0.605
+anchor_right = 0.572351
+anchor_bottom = 0.605
+offset_left = 0.503998
+offset_top = -85.04
+offset_right = 60.504
+offset_bottom = -25.04
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5251
+offset_top = 0.052
+offset_right = 12.4749
+offset_bottom = 46.052
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv7" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.649393
+anchor_top = 0.47463
+anchor_right = 0.649393
+anchor_bottom = 0.47463
+offset_left = -0.248047
+offset_top = -84.5601
+offset_right = 59.752
+offset_bottom = -24.5601
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv7"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.524
+anchor_right = 0.476
+anchor_bottom = 0.524
+offset_left = -26.7922
+offset_top = 1.4405
+offset_right = 13.2078
+offset_bottom = 47.4405
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv8" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.723393
+anchor_top = 0.60963
+anchor_right = 0.723393
+anchor_bottom = 0.60963
+offset_left = 0.503998
+offset_top = -85.04
+offset_right = 60.504
+offset_bottom = -25.04
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5251
+offset_top = 0.052
+offset_right = 12.4749
+offset_bottom = 46.052
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv9" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.799567
+anchor_top = 0.476173
+anchor_right = 0.799567
+anchor_bottom = 0.476173
+offset_left = -0.248047
+offset_top = -84.5601
+offset_right = 59.752
+offset_bottom = -24.5601
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv9"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.524
+anchor_right = 0.476
+anchor_bottom = 0.524
+offset_left = -26.7922
+offset_top = 1.4405
+offset_right = 13.2078
+offset_bottom = 47.4405
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="niv10" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.873567
+anchor_top = 0.611173
+anchor_right = 0.873567
+anchor_bottom = 0.611173
+offset_left = 0.503998
+offset_top = -85.04
+offset_right = 60.504
+offset_bottom = -25.04
+rotation = 0.785398
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="niv10"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.489081
+anchor_top = 0.581629
+anchor_right = 0.655748
+anchor_bottom = 0.581629
+offset_left = -27.5251
+offset_top = 0.052
+offset_right = 12.4749
+offset_bottom = 46.052
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785398
+theme_override_fonts/font = ExtResource("1_c8cok")
+theme_override_font_sizes/font_size = 45
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="niv1" to="." method="_on_niv_1_pressed"]
+[connection signal="pressed" from="niv2" to="." method="_on_niv_2_pressed"]
+[connection signal="pressed" from="niv3" to="." method="_on_niv_3_pressed"]
+[connection signal="pressed" from="niv4" to="." method="_on_niv_4_pressed"]
+[connection signal="pressed" from="niv5" to="." method="_on_niv_1_pressed"]
+[connection signal="pressed" from="niv6" to="." method="_on_niv_2_pressed"]
+[connection signal="pressed" from="niv7" to="." method="_on_niv_1_pressed"]
+[connection signal="pressed" from="niv8" to="." method="_on_niv_2_pressed"]
+[connection signal="pressed" from="niv9" to="." method="_on_niv_1_pressed"]
+[connection signal="pressed" from="niv10" to="." method="_on_niv_2_pressed"]

@@ -1,0 +1,18 @@
+{
+  "move_left": {
+      "type": "InputEventKey",
+      "keycode": "KEY_A"
+  },
+  "move_right": {
+      "type": "InputEventKey",
+      "keycode": "KEY_D"
+  },
+  "jump": {
+      "type": "InputEventKey",
+      "keycode": "KEY_SPACE"
+  },
+  "dash": {
+      "type": "InputEventKey",
+      "keycode": "KEY_SHIFT"
+  }
+}
